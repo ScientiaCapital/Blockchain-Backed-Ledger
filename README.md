@@ -1,6 +1,6 @@
 # Blockchain Backed Ledger
 
-![Blockchain_Backed_Ledger]()
+![Blockchain_Backed_Ledger](https://github.com/ScientiaCapital/Blockchain-Backed-Ledger/blob/main/Images/BlockChain_System.jpeg)
 
 ---
 
