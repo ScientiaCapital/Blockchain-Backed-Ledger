@@ -1,7 +1,5 @@
 # Blockchain Backed Ledger
 
-This notebook consists of analyzing the cumulative returns of two different machine learning algorithms for AlgoTrading.
-
 ![Blockchain_Backed_Ledger]()
 
 ---
