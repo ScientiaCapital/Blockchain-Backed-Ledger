@@ -44,7 +44,7 @@ import hashlib
 
 ![Example_Two](https://github.com/ScientiaCapital/Blockchain-Backed-Ledger/blob/main/Images/storeImage.png)
 
-![Example_Two]()
+![Example_Two](https://github.com/ScientiaCapital/Blockchain-Backed-Ledger/blob/main/Images/ledgerImage.png)
 
 ---
 
