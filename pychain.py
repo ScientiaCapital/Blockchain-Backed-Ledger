@@ -46,12 +46,11 @@ import hashlib
 # Note that you’ll use this new `Record` class as the data type of your `record` attribute in the next section.
 
 
-# @TODO
+
 # Create a Record Data Class that consists of the `sender`, `receiver`, and
 # `amount` attributes
 @dataclass
 class Record:
-
     sender: str
     receiver: str
     amount: float
@@ -73,32 +72,32 @@ class Block:
 
     # Rename the `data` attribute to `record`, and set the data type to `Record`
     record: Record
-data: Any
+    data: Any
 
     creator_id: int
     prev_hash: str = 0
     timestamp: str = datetime.datetime.utcnow().strftime("%H:%M:%S")
     nonce: str = 0
 
-    def hash_block(self):
-        sha = hashlib.sha256()
+def hash_block(self):
+    sha = hashlib.sha256()
 
-        record = str(self.record).encode()
-        sha.update(record)
+    record = str(self.record).encode()
+    sha.update(record)
 
-        creator_id = str(self.creator_id).encode()
-        sha.update(creator_id)
+    creator_id = str(self.creator_id).encode()
+    sha.update(creator_id)
 
-        timestamp = str(self.timestamp).encode()
-        sha.update(timestamp)
+    timestamp = str(self.timestamp).encode()
+    sha.update(timestamp)
 
-        prev_hash = str(self.prev_hash).encode()
-        sha.update(prev_hash)
+    prev_hash = str(self.prev_hash).encode()
+    sha.update(prev_hash)
 
-        nonce = str(self.nonce).encode()
-        sha.update(nonce)
+    nonce = str(self.nonce).encode()
+    sha.update(nonce)
 
-        return sha.hexdigest()
+    return sha.hexdigest()
 
 
 @dataclass
@@ -169,19 +168,15 @@ pychain = setup()
 # 4. Add an input area where you can get a value for `amount` from the user.
 # 5. As part of the Add Block button functionality, update `new_block` so that `Block` consists of an attribute named `record`, which is set equal to a `Record` that contains the `sender`, `receiver`, and `amount` values. The updated `Block`should also include the attributes for `creator_id` and `prev_hash`.
 
-# @TODO:
 # Delete the `input_data` variable from the Streamlit interface.
 input_data = st.text_input("Block Data")
 
-# @TODO:
 # Add an input area where you can get a value for `sender` from the user.
 sender_input = st.text_input("Sender")
 
-# @TODO:
 # Add an input area where you can get a value for `receiver` from the user.
 receiver_input = st.text_input("Receiver")
 
-# @TODO:
 # Add an input area where you can get a value for `amount` from the user.
 amount_input = st.text_input("Amount")
 
@@ -189,7 +184,6 @@ if st.button("Add Block"):
     prev_block = pychain.chain[-1]
     prev_block_hash = prev_block.hash_block()
 
-    # @TODO
     # Update `new_block` so that `Block` consists of an attribute named `record`
     # which is set equal to a `Record` that contains the `sender`, `receiver`,
     # and `amount` values
